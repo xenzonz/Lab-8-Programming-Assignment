@@ -19,11 +19,11 @@ def get_upc_input() -> str:
         upc_code: str = input("Enter 12 digit UPC-A code: ").strip()
 
         if len(upc_code) != 12:
-            print("error must be 12 digits")
+            print("Error: UPC must be exactly 12 digits long\n")
             continue
         
         if not upc_code.isdigit():
-            print("error must be numbers only")
+            print("Error: UPC must contain only numbers\n")
             continue
 
         return upc_code         
