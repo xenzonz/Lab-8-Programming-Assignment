@@ -57,12 +57,20 @@ def main() -> None:
     upc_code: str = get_upc_input()
 
     first_eleven_digits: str = upc_code[:11]
+    provided_check_digit: str = upc_code[11]
 
-    check_digit: int = find_upc(first_eleven_digits)
+    expected_check_digit: int = find_upc(first_eleven_digits)
 
     print(first_eleven_digits)
     print(upc_code)
-    print(check_digit)
+    print(provided_check_digit)
+    print(expected_check_digit)
+
+    if expected_check_digit == provided_check_digit:
+        print("this is valid")
+    else:
+        print("invalid")
+
     
 
 if __name__ == "__main__":
