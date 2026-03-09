@@ -11,3 +11,14 @@ iii.  Program that validates a 12-digit UPC-A code.
 iv. No starter code
 v. 3/8/2026
 """
+
+def get_input():
+
+    upc = int(input("enter 12 digit upc number"))
+    
+
+def find_upc():
+    return 0
+
+def main():
+    return 0
