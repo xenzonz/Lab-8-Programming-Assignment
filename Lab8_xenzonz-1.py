@@ -15,14 +15,18 @@ v. 3/8/2026
 
 def get_input():
      
-     upc_code: str = input("Enter 12 digit UPC-A code: ")
+     while True:
+        upc_code: str = input("Enter 12 digit UPC-A code: ")
 
-     if len(upc_code) != 12:
-         print("error must be 12 digits")
-     
-     if not upc_code.isdigit():
-         print("error must be numbers")
+        if len(upc_code) != 12:
+            print("error must be 12 digits")
+            continue
+        
+        if not upc_code.isdigit():
+            print("error must be numbers only")
+            continue
 
+        return upc_code
 
 get_input()         
     
