@@ -1,4 +1,4 @@
-print("hello world")
+#print("hello world")
 
 """
 Docstring for Lab8_xenzonz_1
@@ -16,7 +16,7 @@ v. 3/8/2026
 def get_upc_input() -> str:
      
      while True:
-        upc_code: str = input("Enter 12 digit UPC-A code: ")
+        upc_code: str = input("Enter 12 digit UPC-A code: ").strip()
 
         if len(upc_code) != 12:
             print("error must be 12 digits")
@@ -61,15 +61,16 @@ def main() -> None:
 
     expected_check_digit: int = find_upc(first_eleven_digits)
 
-    print(first_eleven_digits)
-    print(upc_code)
-    print(provided_check_digit)
-    print(expected_check_digit)
+    print(f"\nThe first 11 digits are '{first_eleven_digits}'.")
+    #print(upc_code)
+    print(f"The provided check digit is '{provided_check_digit}'.")
+    print("\nCalculating...")
+    print(f"\nThe expected check digit is '{expected_check_digit}'.")
 
-    if expected_check_digit == provided_check_digit:
-        print("this is valid")
+    if expected_check_digit == int(provided_check_digit):
+        print("This is a VALID UPC.")
     else:
-        print("invalid")
+        print("This is an INVALID UPC.")
 
     
 
