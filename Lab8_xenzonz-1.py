@@ -35,8 +35,19 @@ def find_upc(first_eleven_digits: str) -> int:
     even_sum: int = 0
 
     for i, digit in enumerate(first_eleven_digits):
+        number: int = int(digit)
 
-        return 0
+        if i % 2 == 0:
+            odd_sum += number
+        else:
+            even_sum += number
+    
+    total: int = (odd_sum * 3) + even_sum
+    check_digit: int = (10 - (total % 10)) % 10
+
+    return check_digit
+
+
 
 
 
@@ -46,6 +57,12 @@ def main() -> None:
     upc_code: str = get_upc_input()
 
     first_eleven_digits: str = upc_code[:11]
+
+    check_digit: int = find_upc(first_eleven_digits)
+
+    print(first_eleven_digits)
+    print(upc_code)
+    print(check_digit)
     
 
 if __name__ == "__main__":
