@@ -13,7 +13,7 @@ iv. No starter code
 v. 3/8/2026
 """
 
-def get_input():
+def get_upc_input() -> str:
      
      while True:
         upc_code: str = input("Enter 12 digit UPC-A code: ")
@@ -26,13 +26,27 @@ def get_input():
             print("error must be numbers only")
             continue
 
-        return upc_code
-
-get_input()         
+        return upc_code         
     
 
-def find_upc():
-    return 0
+def find_upc(first_eleven_digits: str) -> int:
+    
+    odd_sum: int = 0
+    even_sum: int = 0
 
-def main():
-    return 0
+    for i, digit in enumerate(first_eleven_digits):
+
+        return 0
+
+
+
+
+def main() -> None:
+    
+    upc_code: str = get_upc_input()
+
+    first_eleven_digits: str = upc_code[:11]
+    
+
+if __name__ == "__main__":
+    main()
