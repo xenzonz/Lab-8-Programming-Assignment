@@ -1,0 +1,1 @@
+a program that validates a 12-digit UPC-A code. The program will ask the user for a 12-digit UPC, use a function to calculate the correct check digit, and then inform the user if the full UPC is valid.
