@@ -1,5 +1,3 @@
-#print("hello world")
-
 """
 Docstring for Lab8_xenzonz_1
 i. LAB 8: UPC Validator
@@ -12,7 +10,6 @@ iv. No starter code
     Algorithm: en.wikipedia.org/wiki/Universal_Product_Code#Check_digit_calculation
 v. 3/8/2026
 """
-
 
 def get_upc_input() -> str:
     """
@@ -35,7 +32,6 @@ def get_upc_input() -> str:
             continue
 
         return upc_code         
-    
 
 def find_upc(first_eleven_digits: str) -> int:
     """
@@ -70,11 +66,6 @@ def find_upc(first_eleven_digits: str) -> int:
 
     return check_digit
 
-
-
-
-
-
 def main() -> None:
     """
     Get a UPC-A code from the user, calculate the expected check digit,
@@ -101,7 +92,6 @@ def main() -> None:
     else:
         print("This is an INVALID UPC.")
 
-    
 #main guard
 if __name__ == "__main__":
     main()
